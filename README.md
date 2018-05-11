@@ -41,6 +41,6 @@ Our mobile solutions allow developers to fast-forward development and focus on b
 
 ## Acknowledgements
 
-This extension was made possible with support by [BeachBum Ltd.]() 
+This extension was made possible with support by **BeachBum Ltd.**
 
 
