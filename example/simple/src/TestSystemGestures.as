@@ -17,6 +17,7 @@ package
 {
 	import com.distriqt.extension.systemgestures.ScreenEdges;
 	import com.distriqt.extension.systemgestures.SystemGestures;
+	import com.distriqt.extension.systemgestures.events.NativeGestureEvent;
 	
 	import flash.display.Sprite;
 	import flash.display.StageAlign;
@@ -25,6 +26,8 @@ package
 	import flash.events.MouseEvent;
 	import flash.text.TextField;
 	import flash.text.TextFormat;
+	import flash.utils.setTimeout;
+	
 	
 	[SWF(backgroundColor="#222222")]
 	/**	
@@ -49,9 +52,13 @@ package
 		public function TestSystemGestures()
 		{
 			super();
-			init();
+			addEventListener( Event.ADDED_TO_STAGE, addedToStageHandler );
 		}
 		
+		private function addedToStageHandler( event:Event ):void
+		{
+			init();
+		}
 		
 		private function init():void
 		{
@@ -70,7 +77,23 @@ package
 			try
 			{
 				message( "SystemGestures Supported: " + SystemGestures.isSupported );
+				message( "SystemGestures Platform:  " + SystemGestures.service.implementation );
 				message( "SystemGestures Version:   " + SystemGestures.service.version );
+				
+				
+				setTimeout( function():void {
+					if (SystemGestures.isSupported)
+					{
+						SystemGestures.service.addEventListener( NativeGestureEvent.GESTURE_SWIPE_DOWN, swipeHandler );
+						SystemGestures.service.addEventListener( NativeGestureEvent.GESTURE_SWIPE_UP, swipeHandler );
+						SystemGestures.service.addEventListener( NativeGestureEvent.GESTURE_SWIPE_LEFT, swipeHandler );
+						SystemGestures.service.addEventListener( NativeGestureEvent.GESTURE_SWIPE_RIGHT, swipeHandler );
+						SystemGestures.service.addEventListener( NativeGestureEvent.TAP, tapHandler );
+						SystemGestures.service.addEventListener( NativeGestureEvent.MENU, tapHandler );
+						SystemGestures.service.addEventListener( NativeGestureEvent.SELECT, tapHandler );
+						SystemGestures.service.addEventListener( NativeGestureEvent.PLAYPAUSE, tapHandler );
+					}
+				}, 100 );
 			}
 			catch (e:Error)
 			{
@@ -108,10 +131,10 @@ package
 			//	Do something when user clicks screen?
 			//
 			
-			if (SystemGestures.isSupported)
+			if (SystemGestures.isDeferredScreenEdgesSupported)
 			{
 				message( "getDeferredScreenEdges() = " + SystemGestures.service.getDeferredScreenEdges() );
-				
+
 				message( "setDeferredScreenEdges()" );
 				SystemGestures.service.setDeferredScreenEdges( ScreenEdges.ALL );
 			}
@@ -119,7 +142,15 @@ package
 		}
 		
 		
-
+		private function swipeHandler( event:NativeGestureEvent ):void
+		{
+			message( "swipe: " + event.type );
+		}
+		
+		private function tapHandler( event:NativeGestureEvent ):void
+		{
+			message( "tap: " + event.type + " ("+event.location.x + ","+event.location.y +")" );
+		}
 		
 	}
 }

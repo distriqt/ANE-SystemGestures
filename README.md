@@ -10,6 +10,7 @@ gives you the ability to control the system gestures, particularly on iOS 11 +.
 ### Features
 
 - Defer screen edge gestures to allow your immersive application access to edge gestures
+- Access native gestures and Apple remote events (menu / select / play pause)
 - Sample project code and ASDocs reference
 
 
@@ -44,3 +45,4 @@ Our mobile solutions allow developers to fast-forward development and focus on b
 This extension was made possible with support by **BeachBum Ltd.**
 
 
+![](images/promo.png)

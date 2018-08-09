@@ -1,5 +1,13 @@
 
 
+###### 2018.08.09 [v1.1.027]
+
+```
+Added swipe and native gestures
+tvOS support (resolves #1)
+```
+
+
 ###### 2018.05.11 [v1.0.018]
 
 Documentation update
