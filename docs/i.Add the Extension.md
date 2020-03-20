@@ -6,9 +6,16 @@ To do this use the tutorial located [here](https://airnativeextensions.github.io
 
 
 
-## Required ANEs
+## Dependencies
 
-### Core ANE
+Many of our extensions use some common libraries, for example, the Android Support libraries.
+
+We have to separate these libraries into separate extensions in order to avoid multiple versions of the libraries being included in your application and causing packaging conflicts. This means that you need to include some additional extensions in your application along with the main extension file.
+
+You will add these extensions as you do with any other extension, and you need to ensure it is packaged with your application.
+
+
+### Core 
 
 The Core ANE is required by this ANE. You must include and package this extension in your application.
 
