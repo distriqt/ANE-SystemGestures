@@ -131,13 +131,21 @@ package
 			//	Do something when user clicks screen?
 			//
 			
+			// Home indicator
+			message( "setPrefersHomeIndicatorAutoHidden()" );
+			SystemGestures.service.setPrefersHomeIndicatorAutoHidden( true );
+			
+			
+			
+			// Deferred edges
 			if (SystemGestures.isDeferredScreenEdgesSupported)
 			{
 				message( "getDeferredScreenEdges() = " + SystemGestures.service.getDeferredScreenEdges() );
-
+				
 				message( "setDeferredScreenEdges()" );
 				SystemGestures.service.setDeferredScreenEdges( ScreenEdges.ALL );
 			}
+			
 			
 		}
 		
@@ -145,6 +153,8 @@ package
 		private function swipeHandler( event:NativeGestureEvent ):void
 		{
 			message( "swipe: " + event.type );
+			
+			
 		}
 		
 		private function tapHandler( event:NativeGestureEvent ):void

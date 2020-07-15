@@ -1,5 +1,12 @@
 
 
+###### 2020.07.15 [v2.1.040]
+
+```
+Added Home indicator control through setPrefersHomeIndicatorAutoHidden
+```
+
+
 ###### 2020.03.20 [v2.0.034]
 
 ```

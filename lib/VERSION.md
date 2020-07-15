@@ -1,1 +1,1 @@
-| com.distriqt.SystemGestures | 2.0.033 |
+| com.distriqt.SystemGestures | 2.1.039 |
