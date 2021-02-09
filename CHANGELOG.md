@@ -1,5 +1,12 @@
 
 
+###### 2021.02.09 [v2.1.045]
+
+```
+Updated build to latest iOS version and corrected default lib
+```
+
+
 ###### 2020.07.15 [v2.1.040]
 
 ```

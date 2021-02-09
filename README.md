@@ -2,10 +2,19 @@ built by [distriqt //](https://airnativeextensions.com)
 
 ![](images/hero.png)
 
+
+>
+> This extension is provided for **free**. If it helps you please consider sponsoring the developers to continue support and development of the extension:
+>
+> [:heart: Sponsor](https://github.com/sponsors/marchbold)
+>
+
+
 # SystemGestures
 
 The [SystemGestures](https://airnativeextensions.com/extension/com.distriqt.SystemGestures) extension 
 gives you the ability to control the system gestures, particularly on iOS 11 +.
+
 
 ### Features
 
@@ -18,7 +27,8 @@ gives you the ability to control the system gestures, particularly on iOS 11 +.
 
 ## Documentation
 
-Latest documentation can be found in the [wiki](https://github.com/distriqt/ANE-SystemGestures/wiki)
+Latest documentation can be found in the [documentation site](https://docs.airnativeextensions.com/docs/systemgestures) along with the [asdocs](https://docs.airnativeextensions.com/asdocs/systemgestures/).
+
 
 Quick Example: 
 
@@ -42,7 +52,7 @@ Our mobile solutions allow developers to fast-forward development and focus on b
 
 ## Acknowledgements
 
-This extension was made possible with support by **BeachBum Ltd.**
+This extension was made possible with support by **BeachBum Ltd.** and continued support from [distriqt](https://distriqt.com).
 
 
 ![](images/promo.png)
