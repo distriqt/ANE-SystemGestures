@@ -2,4 +2,4 @@
 
 | Extension | Version | Android Lib | iOS Lib |
 | --- | --- | --- | --- |
-| com.distriqt.SystemGestures | 2.1.46 |  |  |
+| com.distriqt.SystemGestures | 2.2.0 |  |  |
