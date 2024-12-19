@@ -79,7 +79,17 @@ package
 				message( "SystemGestures Supported: " + SystemGestures.isSupported );
 				message( "SystemGestures Platform:  " + SystemGestures.service.implementation );
 				message( "SystemGestures Version:   " + SystemGestures.service.version );
-				
+
+
+				// Deferred edges
+				if (SystemGestures.isDeferredScreenEdgesSupported)
+				{
+					message( "setDeferredScreenEdges()" );
+					SystemGestures.service.setDeferredScreenEdges( ScreenEdges.RIGHT );
+				}
+
+
+
 				
 				setTimeout( function():void {
 					if (SystemGestures.isSupported)
@@ -131,20 +141,20 @@ package
 			//	Do something when user clicks screen?
 			//
 			
-			// Home indicator
-			message( "setPrefersHomeIndicatorAutoHidden()" );
-			SystemGestures.service.setPrefersHomeIndicatorAutoHidden( true );
-			
-			
-			
-			// Deferred edges
-			if (SystemGestures.isDeferredScreenEdgesSupported)
-			{
-				message( "getDeferredScreenEdges() = " + SystemGestures.service.getDeferredScreenEdges() );
-				
-				message( "setDeferredScreenEdges()" );
-				SystemGestures.service.setDeferredScreenEdges( ScreenEdges.ALL );
-			}
+//			// Home indicator
+//			message( "setPrefersHomeIndicatorAutoHidden()" );
+//			SystemGestures.service.setPrefersHomeIndicatorAutoHidden( true );
+//
+//
+//
+//			// Deferred edges
+//			if (SystemGestures.isDeferredScreenEdgesSupported)
+//			{
+//				message( "getDeferredScreenEdges() = " + SystemGestures.service.getDeferredScreenEdges() );
+//
+//				message( "setDeferredScreenEdges()" );
+//				SystemGestures.service.setDeferredScreenEdges( ScreenEdges.ALL );
+//			}
 			
 			
 		}
